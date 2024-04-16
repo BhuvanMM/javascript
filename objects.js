@@ -35,6 +35,6 @@ JSuser.greeting = function()
 // accesing values defined inside the object
 JSuser.greeting2 = function()
 {
-    console.log(`Hello Js user ,${this.name}`); // this is called string interpolation
+    console.log(`Hello Js user ${this.name}`); // this is called string interpolation
 }
-console.log(JSuser.greeting())
+console.log(JSuser.greeting2())
