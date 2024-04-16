@@ -20,9 +20,9 @@ console.log(JSuser.name);
 console.log(JSuser[mySym]); // accessing symbols
 console.log(JSuser["lastLogginDays"]);
 
-//free an object or cannot commit changes 
+//freeze an object or cannot commit changes 
 JSuser.age=20
-//Object.freeze(JSuser) // no chnages to the values inside objects can be done
+//Object.freeze(JSuser) // no changes to the values inside objects can be done
 //JSuser.age=20 // change in age doesnot happen as we have freezed the object
 
 JSuser.greeting = function()

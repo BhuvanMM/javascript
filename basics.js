@@ -8,7 +8,7 @@ console.table([name,password,email,person_name])
 /*
 1.number
 2.null=> not a valid value
-3.undefined=>undefined
+3.undefined=>undefined value
 4.bigint
 5.string
 */
