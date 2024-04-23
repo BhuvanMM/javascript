@@ -20,3 +20,11 @@ console.log(url.replace('%20','-'));
 console.log(url.trim()) //removes spaces
 console.log(url.split('/'));
 console.log(url.charAt(2));
+
+//strings and math
+
+const balance=new Number(100.4567)
+console.log(balance.toFixed(2));
+
+const otherNumber=100.8675
+console.log(otherNumber.toPrecision(3));
