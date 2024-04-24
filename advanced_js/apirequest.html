@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>api requests</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const requestUrl='https://api.github.com/users/hiteshchoudhary'
+    const x=new XMLHttpRequest();
+    x.open('GET',requestUrl)
+    x.onreadystatechange=function()
+    {
+        console.log(x.readyState);
+        if(x.readyState === 4)
+        {
+            const data = JSON.parse(this.responseText)
+            console.log(typeof data);
+            console.log(data.followers);
+        }
+    }
+   // console.log("HERE");
+    x.send()
+</script>
+</html>
