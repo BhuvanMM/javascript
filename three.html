@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html sample</title>
+</head>
+<body>
+    <h1>Learning async javascript</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    const randomColor=function()
+    {
+        const hex="0123456789ABCDEF"
+        let color='#'
+        for(let i=0;i<6;i++)
+        {
+            color+=hex[Math.floor(Math.random()*16)];
+        }
+        return color;
+    };
+    let interval;
+    const startchangingcolor=function(){
+        interval=setInterval(changecolor,1000)
+        function changecolor()
+        {
+            document.body.style.background=randomColor()
+        }
+    };
+    const stopchangingcolor=function(){
+        clearInterval(interval)
+    };
+    document.querySelector('#start').addEventListener('click',startchangingcolor);
+    document.querySelector('#stop').addEventListener('click',stopchangingcolor);
+</script>
+</html>
