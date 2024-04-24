@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html events</title>
+</head>
+<body style="background-color: cadetblue;">
+    <h2>Few pictures</h2>
+    <ul id="images">
+        <li><img width="200px" id="img-1" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2944&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+            alt="unplash-1"></li>
+        <li><img width="200px" id="img-2" src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHdlYiUyMGRldmVsb3BtZW50fGVufDB8fDB8fHww" 
+            alt="unplash-2"></li>
+        <li><img width="200px" id="img-3" src="https://media.istockphoto.com/id/1458945088/photo/close-up-web-ux-designer-working-on-website-project.webp?b=1&s=170667a&w=0&k=20&c=95QXayoyVSCcfSk6cKHHLdjGhW4teKJSP3nwj90BTIs=" 
+            alt="unsplash-3"></li>
+    </ul>
+</body>
+<script>
+    document.getElementById("images").addEventListener('click',function(e){
+        console.log("clicked inside ul")
+    },false)
+
+    document.getElementById("img-3").addEventListener('click',function(e){
+        console.log("owl clicked")
+        e.stopPropagation();
+    },false)
+</script>
+</html>
